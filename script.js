@@ -58,12 +58,16 @@ document.querySelectorAll('a.scroll-link, .site-header nav a, a[href^="#"]').for
         // モーダルを開いたときはデフォルトでポスターを表示
         if (currentPoster) {
           modalEmbed.innerHTML = `
-            <object data="${currentPoster}" type="application/pdf" width="100%" height="500px">
-              <p>ポスターを表示できません。<a href="${currentPoster}" target="_blank">こちら</a>からご確認ください。</p>
-            </object>
-            <p style="text-align:center; margin-top:10px;">
-              <a href="${currentPoster}" target="_blank">別ウィンドウで閲覧する</a>
-            </p>
+    <object data="${currentPoster}" type="application/pdf" width="100%" height="500px">
+      <p style="text-align:center; margin-top:10px; color:#f1c40f;">
+        ポスターを表示できません。<a href="${currentPoster}" target="_blank" style="color:#f1c40f; text-decoration: underline;">こちら</a>からご確認ください。
+      </p>
+    </object>
+    <p style="text-align:center; margin-top:15px; color:#f1c40f;">
+      <a href="${currentPoster}" target="_blank" style="color:#f1c40f; text-decoration: none; padding: 8px 16px; border-radius: 4px; transition: background-color 0.3s;">
+        別ウィンドウで閲覧する
+      </a>
+    </p>
           `;
         }
       });
@@ -73,12 +77,16 @@ document.querySelectorAll('a.scroll-link, .site-header nav a, a[href^="#"]').for
     posterBtn.addEventListener('click', function() {
       if (currentPoster) {
         modalEmbed.innerHTML = `
-          <object data="${currentPoster}" type="application/pdf" width="100%" height="500px">
-            <p>ポスターを表示できません。<a href="${currentPoster}" target="_blank">こちら</a>からご確認ください。</p>
-          </object>
-          <p style="text-align:center; margin-top:10px;">
-            <a href="${currentPoster}" target="_blank">別ウィンドウで閲覧する</a>
-          </p>
+      <object data="${currentPoster}" type="application/pdf" width="100%" height="500px">
+        <p style="text-align:center; margin-top:10px; color:#f1c40f;">
+          ポスターを表示できません。<a href="${currentPoster}" target="_blank" style="color:#f1c40f; text-decoration: underline;">こちら</a>からご確認ください。
+        </p>
+      </object>
+      <p style="text-align:center; margin-top:15px; color:#f1c40f;">
+        <a href="${currentPoster}" target="_blank" style="color:#f1c40f; text-decoration: none; padding: 8px 16px; border-radius: 4px; transition: background-color 0.3s;">
+          別ウィンドウで閲覧する
+        </a>
+      </p>
         `;
       }
     });
@@ -87,12 +95,15 @@ document.querySelectorAll('a.scroll-link, .site-header nav a, a[href^="#"]').for
     paperBtn.addEventListener('click', function() {
       if (currentPaper) {
         modalEmbed.innerHTML = `
-          <object data="${currentPaper}" type="application/pdf" width="100%" height="500px">
-            <p>論文を表示できません。<a href="${currentPaper}" target="_blank">こちら</a>からご確認ください。</p>
-          </object>
-          <p style="text-align:center; margin-top:10px;">
-            <a href="${currentPaper}" target="_blank">別ウィンドウで閲覧する</a>
-          </p>
+      <object data="${currentPaper}" type="application/pdf" width="100%" height="500px">
+        <p style="text-align:center; margin-top:10px; color:#f1c40f;">
+          論文を表示できません。<a href="${currentPaper}" target="_blank" style="color:#f1c40f; text-decoration: underline;">こちら</a>からご確認ください。
+        </p>
+      </object>
+      <p style="text-align:center; margin-top:15px;s color:#f1c40f;">
+        <a href="${currentPaper}" target="_blank" style="color:#f1c40f; text-decoration: none; padding: 8px 16px; border-radius: 4px; transition: background-color 0.3s;">
+          別ウィンドウで閲覧する
+        </a>
         `;
       }
     });
@@ -242,4 +253,12 @@ document.getElementById('deim-project-link').addEventListener('click', function(
       target.classList.remove('highlight');
     }, 1000);
   }
+});
+
+
+const toggleButton = document.getElementById('toggle-darkmode');
+
+toggleButton.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  // ユーザー設定をローカルストレージなどに保存する場合はここで対応
 });

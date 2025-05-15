@@ -9,6 +9,7 @@
     line-height: 1.6;
     background-color: #f9f9f9;
     color: #333;
+    transition: background-color 0.5s ease, color 0.5s ease;
   }
   
   .container {
@@ -92,10 +93,11 @@ ul{
     align-items: center;
   }
   
-  .site-header .logo a {
-    color: #fff;
-    font-size: 1.5em;
-    font-weight: bold;
+  #toggle-darkmode {
+    cursor: pointer;
+    width: 200px; /* 幅を50pxに変更 */
+    height: auto; /* 縦横比を維持 */
+    margin-left: 15px;
     text-decoration: none;
   }
   
@@ -728,7 +730,7 @@ footer {
     .site-header nav ul {
         display: flex;
         flex-direction: row;
-        margin-top: 10px; /* ロゴと少し間隔を空ける */
+        margin-left: -20px;
     }
     
     .projects-grid {
@@ -806,3 +808,132 @@ footer {
 }
 
 
+
+/* ========= ダークモード用オーバーライド ========= */
+
+body.dark-mode {
+  /* 全体の背景と文字色 */
+  background-color: #4a4a4a;
+  color: #ccc;
+}
+
+body.dark-mode {
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0.7; }
+  to { opacity: 1; }
+}
+
+/* 固定ヘッダー */
+body.dark-mode .site-header {
+  background: rgba(0, 0, 0, 0.95);
+}
+
+/* ナビゲーションリンク */
+body.dark-mode .site-header .logo a,
+body.dark-mode .site-header nav ul li a {
+  color: #ccc;
+}
+body.dark-mode .site-header nav ul li a:hover {
+  color: #ffd700;
+}
+
+/* ヒーローセクションのオーバーレイなど（適宜調整） */
+body.dark-mode .hero-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* 各セクション内タイトルや見出し */
+body.dark-mode h2 {
+  /* 下線として使っている border-color を薄いグレーに */
+  border-color: #444;
+}
+body.dark-mode .timeline-content h3 {
+  border-color: #666;
+}
+
+/* 背景色付きセクション */
+body.dark-mode .bg-light {
+  /* ライトモードの背景 #f1f1f1 の代わりに、暗めの背景 */
+  background-color: #3b3b3b;
+}
+
+/* タイムライン（経験）のボーダーと背景 */
+body.dark-mode .timeline {
+  border-left: 2px solid #555;
+}
+body.dark-mode .timeline-content {
+  background: #1e1e1e;
+  color: #ccc;
+  box-shadow: none;
+}
+
+/* SNSリンク */
+body.dark-mode .sns a {
+  color: #ccc;
+}
+body.dark-mode .sns a:hover {
+  color: #f3c441;
+}
+
+/* プロジェクトグリッド：プロジェクトカード */
+body.dark-mode .project-item {
+  background: #222;
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
+}
+  
+/* モーダルウィンドウ */
+body.dark-mode .modal-content {
+  background: #333;
+  color: #ccc;
+}
+/* モーダルのボタン */
+body.dark-mode .modal-buttons button {
+  background-color: #007bff; /* 必要に応じて変更 */
+  color: #fff;
+}
+body.dark-mode .modal-buttons button:hover {
+  background-color: #0056b3;
+}
+
+/* スキルカード */
+body.dark-mode .skill-item{
+  background: #000000;
+  color: #ccc;
+  border: 1px solid #444;
+  box-shadow: none;
+}
+
+body.dark-mode .description, body.dark-mode .frameworks{
+  color: #ccc;
+}
+
+/* 各種ボタン */
+body.dark-mode .btn {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ccc;
+}
+body.dark-mode .btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* フッター */
+body.dark-mode footer {
+  background: #000;
+  color: #888;
+}
+body.dark-mode .social-links a {
+  color: #ffd700;
+}
+body.dark-mode .social-links a:hover {
+  color: #fff;
+}
+
+/* PDF 埋め込みエリアなど（必要に応じて） */
+body.dark-mode #modal-embed {
+  border-color: #555;
+}
+
+/* 必要に応じて、他のパーツも調整してください */
