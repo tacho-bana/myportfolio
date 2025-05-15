@@ -21,7 +21,7 @@
 h2{
   border-bottom-style: solid;
   border-width: 2px;
-  width: 400px;
+  width: 80%;
   margin: 0 auto;
   border-color: #cacaca;
 }
@@ -722,69 +722,92 @@ footer {
   
   /* レスポンシブ対応 */
   @media (max-width: 768px) {
+    /* ヘッダー内のコンテナ */
     .site-header .container {
       flex-direction: column;
       align-items: center;
+      padding: 10px; /* 余白を追加（必要に応じて調整） */
+      width: 100%;
     }
-    
+      
+    /* ナビゲーションのリスト */
     .site-header nav ul {
         display: flex;
         flex-direction: row;
-        margin-left: -20px;
+        margin-left: -20px; /* お好み調整。崩れる場合はゼロも検討 */
+        padding: 0;
+        list-style: none;
     }
-    
+      
+    /* プロジェクトグリッド */
     .projects-grid {
       flex-direction: column;
     }
-    
+      
     .project-item {
       width: 100%;
       padding-bottom: 16px;
     }
-    
+      
+    /* スキルグリッド */
     .skills-grid {
       flex-direction: column;
-    }
-  
-    .hero-text h1 {
-      font-size: 2.5em;
+      align-items: center; /* 中央寄せでバランスを整える */
     }
     
+    /* ヒーローテキスト */
+    .hero-text h1 {
+      font-size: 2.5em;
+      text-align: center; /* スマホでは中央寄せに */
+    }
+      
     .hero-text p {
       font-size: 1.3em;
+      text-align: center;
     }
+    
+    /* 自己紹介コンテンツ */
     .about-content {
       flex-direction: column;
       text-align: center;
     }
-    
+      
     .about-img {
       max-width: 150px;
       margin: 0 auto;
     }
-
+  
+    /* スキルの個々のアイテム */
     .skill-item {
       padding: 10px;
+      text-align: center;
     }
+    
     .skill-logo {
       width: 80px;
       height: 80px;
+      max-width: 100%; /* 画面幅より大きくならないように */
     }
+    
     .language-name {
       font-size: 1.2rem;
     }
+    
     .star-rating {
       font-size: 1.2rem;
     }
-
+  
+    /* SNS部分 */
     .sns {
       margin-top: 20px;
       text-align: center;
     }
+    
     .last-update {
       position: static; /* 通常のフローに戻す */
       display: block;
       margin-top: 15px; /* SNSリンクとの隙間を確保 */
+      text-align: center;
     }
   }
 
