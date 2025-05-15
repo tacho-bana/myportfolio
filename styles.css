@@ -960,3 +960,6 @@ body.dark-mode #modal-embed {
 }
 
 /* 必要に応じて、他のパーツも調整してください */
+body.dark-mode h2{
+  border-color: #d8d8d8;
+}
