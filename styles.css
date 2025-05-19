@@ -328,6 +328,19 @@ ul{
   .project-item h3 {
     padding: 10px;
   }
+
+  .thumbnail {
+    margin: 10px 0;  /* タイトルとボタンの間に適度な余白を */
+    text-align: center;
+  }
+  
+  .thumbnail img {
+    max-width: 95%;
+    height: auto;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  }
   
 /* モーダル 全体(オーバーレイ) */
 .modal {
