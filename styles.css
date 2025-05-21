@@ -610,6 +610,10 @@ footer {
   transform: translateY(0);
 }
 
+#zisseki{
+  color: #a2840b;
+}
+
 /* ローディング画面全体の背景 */
 #loading {
   position: fixed;
