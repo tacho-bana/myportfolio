@@ -1,363 +1,419 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="img/favicon.png" type="image/png">
-  <title>橘由翔 / Tachibana Yuto</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title>橘由翔 / Tachibana Yuto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="loading">
-  <div class="beer-mug">
-    <div class="beer-content">
-      <div class="beer-fill">
-        <div class="beer-foam">
-          <span class="bubble"></span>
-          <span class="bubble"></span>
-          <span class="bubble"></span>
-          <span class="bubble"></span>
-          <span class="bubble"></span>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span>Portfolio</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-      </div>
-      <div class="progress-text">0%</div>
-    </div>
-  </div>
-</div>
-<header class="site-header">
-  <div class="container">
-     <img 
-      src="img/panda.png" 
-      id="toggle-darkmode" >
-  <nav>
-
-      <ul>
-        <li><a href="#about">自己紹介</a></li>
-        <li><a href="#skills">スキル</a></li>
-        <li><a href="#experience">経歴</a></li>
-        <li><a href="#projects">実績</a></li>
-      </ul>
     </nav>
-  </div>
-</header> 
 
-  <!-- ヒーローセクション -->
-  <section id="hero">
-    <div class="hero-container">
-      <img src="img/IMG_4106.jpg" alt="ヒーロー画像" class="hero-img">
-      <div class="hero-overlay">
-        <div class="hero-text">
-          <h1>YUTO TACHIBANA</h1>
-          <p>MUSASHINO UNIVERSITY</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-name">橘 由翔<br><span class="hero-subtitle">Yuto Tachibana</span></h1>
+                    <p class="hero-description">
+                        武蔵野大学データサイエンス学部に所属し、データサイエンスのスキルに加え、Webエンジニアとしての勉強もしています。<br>
+                        データサイエンス分野での研究実績と実践的な開発経験を活かし、<br>
+                        技術力と課題解決能力を兼ね備えたエンジニアを目指しています。
+                    </p>
+                </div>
+                <div class="hero-image">
+                    <div class="image-container">
+                        <img src="img/profile.jpg" alt="橘由翔のプロフィール画像">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">エンジニアとしての歩みと価値観</p>
+            </div>
+            <div class="about-content">
+                <div class="about-info">
+                    <div class="info-card">
+                        <i class="fas fa-user"></i>
+                        <h3>基本情報</h3>
+                        <p>2004年生まれ（27卒）<br>東京都出身<br>武蔵野大学データサイエンス学部</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-code"></i>
+                        <h3>専門分野</h3>
+                        <p>Web開発<br>データサイエンス<br>機械学習</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-target"></i>
+                        <h3>目指す方向</h3>
+                        <p>フルスタックエンジニア<br>技術で社会課題を解決<br>チーム開発でのリーダーシップ</p>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p>
+                        大学でデータサイエンスを学ぶ中で、データの力を実際のプロダクトに活かすことへの興味と、イメージしたものを実際に形にして動かす楽しさから、Web開発の道に進みました。
+                        研究活動では機械学習を活用したシステム開発を行い、学会での発表・受賞の経験があります。
+                    </p>
+                    <p>
+                        インターンシップやハッカソンを通じて実践的な開発スキルを身につけ、
+                        特にPythonとJavaScriptを用いたフルスタック開発に強みを持っています。
+                        チーム開発では積極的にコミュニケーションを取り、技術的な課題解決に貢献することを心がけています。
+                    </p>
+                    <div class="social-links">
+                        <a href="https://github.com/tacho-bana" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://x.com/4fEgc" target="_blank" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/%E7%94%B1%E7%BF%94-%E6%A9%98-349655362/" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-subtitle">習得している技術スタック</p>
+            </div>
+            <div class="skills-content">
+                <div class="skills-category">
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <img src="img/python.png" alt="Python" class="skill-icon">
+                                <div class="skill-info">
+                                    <h4>Python</h4>
+                                </div>
+                            </div>
+                            <p>データ分析、機械学習、Web開発（FastAPI/Flask）で使用。実装経験が最も多い。</p>
+                            <div class="skill-tags">
+                                <span class="tag">FastAPI</span>
+                                <span class="tag">Flask</span>
+                                <span class="tag">pandas</span>
+                                <span class="tag">scikit-learn</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <img src="img/js.png" alt="JavaScript" class="skill-icon">
+                                <div class="skill-info">
+                                    <h4>JavaScript / TypeScript</h4>
+
+                                </div>
+                            </div>
+                            <p>フロントエンド開発とAPI連携で使用。モダンなフレームワークを活用。</p>
+                            <div class="skill-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Next.js</span>
+                                <span class="tag">jQuery</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <img src="img/HTML.png" alt="HTML/CSS" class="skill-icon">
+                                <div class="skill-info">
+                                    <h4>HTML / CSS</h4>
+                                </div>
+                            </div>
+                            <p>レスポンシブデザインとモダンCSS技術を用いたUI/UX設計</p>
+                            <div class="skill-tags">
+                                <span class="tag">SCSS</span>
+                                <span class="tag">Tailwind CSS</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <img src="img/go.png" alt="go" class="skill-icon">
+                                <div class="skill-info">
+                                    <h4>GO</h4>
+                                </div>
+                            </div>
+                            <p>Webアプリ開発時のバックエンドで使用</p>
+                            <div class="skill-tags">
+                                <span class="tag">Gin</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3>Database & Others</h3>
+                    <div class="skill-items secondary">
+                        <div class="skill-item-compact">
+                            <img src="img/sql.png" alt="SQL" class="skill-icon-small">
+                            <div class="skill-compact-info">
+                                <h4>SQL</h4>
+                                <p>SQLite, PostgreSQL</p>
+                            </div>
+                        </div>
+                        <div class="skill-item-compact">
+                            <img src="img/java.png" alt="Java" class="skill-icon-small">
+                            <div class="skill-compact-info">
+                                <h4>Java</h4>
+                                <p>オブジェクト指向設計の学習</p>
+                            </div>
+                        </div>
+                        <div class="skill-item-compact">
+                            <img src="img/docker.png" alt="Docker" class="skill-icon-small">
+                            <div class="skill-compact-info">
+                                <h4>Docker</h4>
+                                <p>コンテナ化・環境構築</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Experience</h2>
+                <p class="section-subtitle">学習歴と実践経験</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2023.04 - 現在</div>
+                    <div class="timeline-content">
+                        <h3>武蔵野大学データサイエンス学部</h3>
+                        <div class="timeline-achievements">
+                            <div class="achievement">
+                                <h4>未来創造プロジェクト <span class="award">学科賞受賞</span></h4>
+                                <p>「ギター初心者を対象とした音声特徴抽出によるエフェクター自動選択機能の実現」をテーマに研究。機械学習を用いた音声解析システムを開発し、学科最優秀賞を受賞。</p>
+                            </div>
+                            <div class="achievement">
+                                <h4>DEIM2025 <span class="award">学生プレゼンテーション賞</span></h4>
+                                <p>「ドライアイ予防のための意識的瞬目促進システムの開発」で主著として論文発表。コンピュータビジョンとWebアプリケーション開発を組み合わせたシステムを構築。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2024.08</div>
+                    <div class="timeline-content">
+                        <h3>株式会社ベオスアイティーホールディングス インターンシップ</h3>
+                        <p>JavaScriptを主言語とした学習用Webアプリケーションの開発。10日間の集中的な開発プロジェクトを通じて、サービスの企画から発表まで行った。</p>
+                        <div class="tech-used">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML/CSS</span>
+                            <span class="tech-tag">jQuery</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2025.07</div>
+                    <div class="timeline-content">
+                        <h3>学部初の学内ハッカソン主催</h3>
+                        <p>データサイエンス学部として初の学内ハッカソンイベントを企画・運営。学生同士の技術交流と実践的な開発経験の場を提供し、学部内のエンジニアリング文化の醸成に貢献。次回以降の学内ハッカソンから大学公認のイベントとして開催できるように。</p>
+                        <div class="tech-used">
+                            <span class="tech-tag">イベント企画</span>
+                            <span class="tech-tag">運営管理</span>
+                            <span class="tech-tag">コミュニティ形成</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2024 - 2025</div>
+                    <div class="timeline-content">
+                        <h3>ハッカソン・競技プログラミング参加</h3>
+                        <div class="timeline-achievements">
+                            <div class="achievement-compact">
+                                <h4>技育CAMP2024 Vol.9</h4>
+                                <p>4人でのチーム開発</p>
+                            </div>
+                            <div class="achievement-compact">
+                                <h4>技育CAMP2025 Vol.4 <span class="award">努力賞</span></h4>
+                                <p>4人でのチーム開発</p>
+                            </div>
+                            <div class="achievement-compact">
+                                <h4>技育CAMP2025 Vol.6</h4>
+                                <p>5人でのチーム開発</p>
+                            </div>
+                            <div class="achievement-compact">
+                                <h4>技育CAMP2025 Vol.10</h4>
+                                <p>4人でのチーム開発</p>
+                            </div>
+                            <div class="achievement-compact">
+                                <h4>Web Speed Hackathon 2025</h4>
+                                <p>Webパフォーマンス最適化に個人で参加</p>
+                            </div>
+                            <div class="achievement-compact">
+                                <h4>Xハッカソン Vol.2</h4>
+                                <p>顧客課題解決のためのWebページ制作</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">主要な制作実績と研究プロジェクト</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card featured">
+                    <div class="project-image">
+                        <img src="img/deim-thumbnail.jpg" alt="DEIM2025プロジェクト">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <button class="project-btn" data-project="deim">詳細を見る</button>
+                                <a href="https://github.com/tacho-bana/ConsciousBlinkingApp" target="_blank" class="project-btn github">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>ドライアイ予防システム</h3>
+                            <span class="project-award">学生プレゼンテーション賞</span>
+                        </div>
+                        <p class="project-description">
+                            コンピュータビジョンを活用したリアルタイム瞬目検出システム。
+                            WebRTCとPythonバックエンドを組み合わせ、ユーザーの瞬目パターンを解析し、
+                            ドライアイ予防のための適切なタイミングで瞬目を促すWebアプリケーション。
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Mediapipe</span>
+                            <span class="tech-tag">OpenCV</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="img/mirai-thumbnail.jpg" alt="未来創造プロジェクト">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <button class="project-btn" data-project="mirai">詳細を見る</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>ギターエフェクター自動選択システム</h3>
+                            <span class="project-award">学科賞</span>
+                        </div>
+                        <p class="project-description">
+                            音声特徴抽出技術を用いて、ギター初心者の演奏に最適なエフェクターを自動選択するシステム。
+                            機械学習アルゴリズムによる音響解析と、直感的なユーザーインターフェースを実現。
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">scikit-learn</span>
+                            <span class="tech-tag">音響解析</span>
+                            <span class="tech-tag">機械学習</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="img/isekai.png" alt="技育CAMP プロジェクト">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <button class="project-btn" data-project="isekai">詳細を見る</button>
+                                <a href="https://github.com/tacho-bana/camp-06" target="_blank" class="project-btn github">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>異世界レシピ</h3>
+                            <span class="project-award">努力賞</span>
+                        </div>
+                        <p class="project-description">
+                            技育CAMP2025で制作したチーム開発プロジェクト。
+                            創作料理のレシピ共有プラットフォームとして、
+                            ユニークなUI/UXとソーシャル機能を実装。
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                                <span class="tech-tag">geminiAPI</span>
+                                <span class="tech-tag">MediaPipe</span>
+                                <span class="tech-tag">FastAPI</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">Next.js</span>
+                                <span class="tech-tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div id="modal-project-content">
+                <!-- Dynamic content will be inserted here -->
+            </div>
+        </div>
     </div>
-    <!-- 下方向へスクロール -->
-    <a href="#about" class="scroll-link">
-      <i class="fa-solid fa-chevron-down"></i>
-    </a>
-  </section>
 
-  <!-- ポートフォリオ本体 -->
-
-  <!-- 自己紹介 -->
-  <section id="about" class="section">
-    <div class="container about-container">
-      <h2>自己紹介</h2>
-      <div class="about-content">
-        <div class="about-img">
-          <img src="img/profile.jpg" alt="プロフィール画像">
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Yuto Tachibana. All rights reserved.</p>
         </div>
-        <div class="about-text">
-          <p>橘 由翔 / Yuto Tachibana<br>
-            2004年生まれ(27卒)<br>東京都出身。武蔵野大学データサイエンス学部。<br>主に研究とWebエンジニアとしての勉強をしています。<br>
-            Mrs. GREEN APPLEが好きでライブがあるたびに足を運んでいます。<br>
-            #27卒 #ソフトウェアエンジニア #Webエンジニア
-          </p>
-          <!-- <p id="mail">mail address → s2322087@stu.musashino-u.ac.jp</p> -->
-          <div class="sns">
-            <a href="https://x.com/4fEgc" target="_blank" aria-label="Twitter">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://github.com/tacho-bana" target="_blank" aria-label="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/%E7%94%B1%E7%BF%94-%E6%A9%98-349655362/" target="_blank" aria-label="LinkedIn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <!-- 必要に応じてさらにリンクを追加 -->
-          </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </footer>
 
-  <!-- スキル -->
-  <section id="skills" class="section bg-light">
-    <div class="container skills-container">
-      <h2>スキル</h2>
-      <ul class="skills-list">
-        <li class="skill-item">
-          <div class="skill-logo">
-            <img src="img/python.png" alt="python">
-          </div>
-          <div class="skill-details">
-            <h3 class="language-name">Python</h3>
-            <p class="description">データ分析、機械学習、開発時のバックエンドで使用。<br>
-            開発時のフレームワークはFastAPIを用いることが多い。</p>
-            <div class="skill-bottom">
-            <div class="star-rating">
-              <span class="star filled">★</span>
-              <span class="star filled">★</span>
-              <span class="star filled">★</span>
-              <span class="star filled">★</span>
-              <span class="star">☆</span>
-            </div>
-            </div>
-            <p class="frameworks">#FastAPI #Flask</p>
-          </div>
-        </li>
-  
-        <li class="skill-item">
-          <div class="skill-logo">
-            <img src="img/HTML.png" alt="html">
-          </div>
-          <div class="skill-details">
-            <h3 class="language-name">HTML/CSS</h3>
-            <p class="description">開発時のフロントエンドに使用。</p>
-            <div class="skill-bottom">
-            <div class="star-rating">
-              <span class="star filled">★</span>
-              <span class="star filled">★</span>
-              <span class="star filled">★</span>
-              <span class="star filled">★</span>
-              <span class="star">☆</span>
-            </div>
-            </div>
-            <p class="frameworks"><br></p>
-          </div>
-        </li>
-
-        <li class="skill-item">
-          <div class="skill-logo">
-            <img src="img/js.png" alt="javascript">
-          </div>
-          <div class="skill-details">
-            <h3 class="language-name">JavaScript/TypeScript</h3>
-            <p class="description">開発時のフロントエンドに使用。<br>
-            FastAPIと組み合わせた開発が多い。</p>
-            <div class="skill-bottom">
-            <div class="star-rating">
-              <span class="star filled">★</span>
-              <span class="star filled">★</span>
-              <span class="star filled">★</span>
-              <span class="star">☆</span>
-              <span class="star">☆</span>
-            </div>
-            </div>
-            <p class="frameworks">#React #Next.js #jQuery</p>
-          </div>
-        </li>
-
-        <li class="skill-item">
-          <div class="skill-logo">
-            <img src="img/sql.png" alt="sql">
-          </div>
-          <div class="skill-details">
-            <h3 class="language-name">SQL</h3>
-            <p class="description">Webアプリ開発時や、データサイエンス領域で使用。</p>
-            <div class="skill-bottom">
-            <div class="star-rating">
-              <span class="star filled">★</span>
-              <span class="star filled">★</span>
-              <span class="star filled">★</span>
-              <span class="star">☆</span>
-              <span class="star">☆</span>
-            </div>
-            </div>
-            <p class="frameworks">#SQLite #Postgresql</p>
-          </div>
-        </li>
-
-        <li class="skill-item">
-          <div class="skill-logo">
-            <img src="img/go.png" alt="go">
-          </div>
-          <div class="skill-details">
-            <h3 class="language-name">Go</h3>
-            <p class="description">開発時のバックエンドに使用。</p>
-            <div class="skill-bottom">
-            <div class="star-rating">
-              <span class="star filled">★</span>
-              <span class="star filled">★</span>
-              <span class="star">☆</span>
-              <span class="star">☆</span>
-              <span class="star">☆</span>
-            </div>
-            </div>
-            <p class="frameworks"><br></p>
-          </div>
-        </li>
-
-        <li class="skill-item">
-          <div class="skill-logo">
-            <img src="img/java.png" alt="java">
-          </div>
-          <div class="skill-details">
-            <h3 class="language-name">Java</h3>
-            <p class="description">開発経験はないが、基本的な文法やオブジェクト指向の概念については理解している。</p>
-            <div class="skill-bottom">
-            <div class="star-rating">
-              <span class="star filled">★</span>
-              <span class="star filled">★</span>
-              <span class="star">☆</span>
-              <span class="star">☆</span>
-              <span class="star">☆</span>
-            </div>
-            </div>
-            <p class="frameworks"><br></p>
-          </div>
-        </li>
-
-        <li class="skill-item">
-          <div class="skill-logo">
-            <img src="img/CS.png" alt="C#">
-          </div>
-          <div class="skill-details">
-            <h3 class="language-name">Other Languages</h3>
-            <p class="description">C#・Unityを用いたゲーム開発、<br>
-            Ruby、phpでの開発経験あり。</p>
-            <div class="skill-bottom">
-            <div class="star-rating">
-              <span class="star filled">★</span>
-              <span class="star">☆</span>
-              <span class="star">☆</span>
-              <span class="star">☆</span>
-              <span class="star">☆</span>
-            </div>
-            </div>
-            <p class="frameworks">#Ruby on Rails</p>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- 経験 -->
-  <section id="experience" class="section">
-    <div class="container">
-      <h2>経歴</h2>
-        <div class="timeline-item">
-          <div class="timeline-date">2023年4月</div>
-          <div class="timeline-content">
-            <h3>武蔵野大学データサイエンス学部入学</h3><br>
-            <ul class="mu-ex">
-              <li>武蔵野大学オープンキャンパス発表 <a href="https://github.com/tacho-bana/OC2023-06" class="url">(2023-06)</a> <a href="https://github.com/tacho-bana/OC2024-06" class="url">(2024-06)</a></li>
-              <li><a href="#" id="mirai-project-link" class="url">未来創造PJ</a>で「ギター初心者を対象とした音声特徴抽出によるエフェクター自動選択機能の実現」というテーマの研究の発表を行い、学科賞を受賞。</li>
-              <li><a href="https://note.com/hackathon/n/n0971da2a1121?sub_rt=share_pb" class="url">XハッカソンVol.2</a>に参加し顧客の課題を解決するWebページを作成。(1日間/4人チーム)</li>
-              <li><a href="https://github.com/tacho-bana/camp2024_07" class="url">技育CAMP2024 7月_Vol.9</a>に参加。(2日間+約1週間の事前開発/4人チーム)</li>
-              <li><a href="https://github.com/tacho-bana/web-speed-hackathon-2025" class="url">Web Speed Hackathon2025</a>に参加。(2日間/1人)</li>
-              <li><a href="https://x.com/geek_pjt/status/1931645430347219306" class="url">技育CAMP2025 Vol.4</a>に参加。努力賞を受賞。(2日間+約1週間の事前開発/4人チーム)</li>
-            </ul>            
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-date">2024年8月</div>
-          <div class="timeline-content">
-            <h3>株式会社ベオスアイティーホールディングスのインターンに参加</h3><br>
-            <p>JavaScriptを主に用いた学習用Webアプリの開発を行う。(10日間)</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-date">2025年3月</div>
-          <div class="timeline-content">
-            <h3>「DEIM2025 第17回データ工学と情報マネジメントに関するフォーラム」において、主著として発表</h3><br>
-            <p><a href="#" id="deim-project-link" class="url">DEIM2025</a>で「ドライアイ予防のための意識的瞬目システムの開発」というテーマで論文を執筆、発表を行う。学生プレゼンテーション賞を受賞。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 制作実績 -->
-  <section id="projects" class="section bg-light">
-    <div class="container">
-      <h2>実績</h2>
-      <div class="projects-grid">
-        <!-- プロジェクト1 -->
-        <div class="project-item"
-             id="project-mirai"
-             data-title="ギター初心者を対象とした音声特徴抽出によるエフェクター自動選択機能の実現" 
-             data-poster="img/mirai-p.pdf">
-          <h3>未来創造PJ <a id="zisseki">学科賞</a></h3>
-          <!-- サムネイル表示部分 -->
-          <div class="thumbnail">
-            <img src="img/mirai-thumbnail.jpg" alt="未来創造PJ サムネイル">
-          </div>
-          <button class="btn modal-btn">概要</button>
-        </div>
-  
-        <!-- プロジェクト2 -->
-        <div class="project-item" 
-             id="project-deim"
-             data-title="ドライアイ予防のための意識的瞬目促進システムの開発" 
-             data-poster="img/deim-p.pdf"
-             data-paper="img/main-j.pdf"
-             data-github="https://github.com/tacho-bana/ConsciousBlinkingApp">
-          <h3>DEIM2025 <a id="zisseki">学生プレゼンテーション賞</a></h3>
-          <!-- サムネイル表示部分 -->
-          <div class="thumbnail">
-            <img src="img/deim-thumbnail.jpg" alt="DEIM2025 サムネイル">
-          </div>
-          <button class="btn modal-btn">概要</button>
-        </div>
-
-        <div class="project-item" 
-             id="project-deim"
-             data-title="異世界レシピ" 
-             data-poster="img/異世界レシピ.pdf"
-             data-github="https://github.com/tacho-bana/camp-06">
-          <h3>技育CAMP2025 Vol.4 <a id="zisseki">努力賞</a></h3>
-          <!-- サムネイル表示部分 -->
-          <div class="thumbnail">
-            <img src="img/isekai.png" alt="isekai サムネイル">
-          </div>
-          <button class="btn modal-btn">概要</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-<div id="modal" class="modal" style="display:none;">
-  <div class="modal-content">
-    <span class="modal-close">&times;</span>
-    <!-- <h2 id="modal-title"></h2> -->
-    <div class="modal-buttons">
-      <button id="poster-btn">ポスター・スライド</button>
-      <button id="paper-btn">論文</button>
-      <button id="githubBtn">GitHubへ</button>
-    </div>
-    <div id="modal-embed"></div>
-  </div>
-</div>
-  <footer>
-    <div class="container">
-      <div class="social-links">
-        <a href="https://x.com/4fEgc "><i class="fa-brands fa-twitter"></i></a>
-        <a href="https://github.com/tacho-bana"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/%E7%94%B1%E7%BF%94-%E6%A9%98-349655362/" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-linkedin"></i>
-        </a>
-      </div>
-      <small>© 2025 Tachibana Yuto</small>
-    </div>
-    <small class="last-update">最終更新日: 205年5月19日</small>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
